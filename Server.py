@@ -65,6 +65,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 }).encode())
                 return
             elif(type == 'get'):
+                clipboard = get_clipboard()
                 self.send_response(200)
                 self.end_headers()
                 self.wfile.write(json.dumps({
