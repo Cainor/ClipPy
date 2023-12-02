@@ -7,19 +7,7 @@ import win32clipboard
 import json
 import socket
 
-ServerIP = "[CHANGE THIS]"
-
-
-def get_ip():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    try:
-        s.connect(('10.255.255.255', 1))
-        IP = s.getsockname()[0]
-    except:
-        IP = '127.0.0.1'
-    finally:
-        s.close()
-    return IP
+ServerIP = "CHANGE THIS"
 
 
 def set_clipboard(clip):
@@ -59,7 +47,6 @@ class RequestHandler(BaseHTTPRequestHandler):
                 set_clipboard(clipboard)
                 self.send_response(200)
                 self.end_headers()
-                print(clipboard)
                 self.wfile.write(json.dumps({
                     'clipboard': str(clipboard),
                 }).encode())
@@ -79,6 +66,6 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    server = HTTPServer(('', 8000), RequestHandler)
-    print('Starting server at http://'+ServerIP+':8000')
+    server = HTTPServer((ServerIP, 8000), RequestHandler)
+    print('Server started at http://'+ServerIP+':8000')
     server.serve_forever()

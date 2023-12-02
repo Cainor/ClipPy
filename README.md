@@ -1,28 +1,33 @@
 # ClipPy
-Local shared clipboard using HTTP server. This allows for easy application on different systems.
+Local shared clipboard using HTTP server. This allows you to easily share your clipboard cross devices
 
 ## Requirements
 `pip install -r requirements.txt`
 
-## Limitation
-The Server must be running on windows environment. Just because it helps me :)
+## Supported OS
+- Windows
+- iOS
 
 # How does it works?
 <p align="center">
   <img src="https://i.imgur.com/axKGfBC.jpg">
 </p>
 
-Start by running "Server.py" on you windows machine. Just double click if you want. (After modifying the "CHANGE THIS")
-then follow the below for each system you have.
+## Modify This Line in Server.py
+```python
+ServerIP = "CHANGE THIS"
+```
 
-## Windows - using the files "Set/Get-Clipboard.py"
-From the host:
-Just download and run. Set and Get clipboard files must work without any changes.
+## Run The Server
+After installing the [required packages](#requirements), double click on `Server.py` or run it using the command line:
+`python Server.py`
 
-From another windows computer:
-Download the same package, change "ServerIP" in "Server.py" to the host IP, then just by clicking Set or Get clipboard files it should work :)
+## Client: Windows"
+Download the same package, change "ServerIP" in "Server.py" to the server IP, then run the files as described below:
+- `Set-Clipboard.py`: To share your current clipboard with the server.
+- `Get-Clipboard.py`: To get the current shared clipboard from the server and set it as yours.
 
-## iOS - Using Shortcuts
+## Client: iOS - Using Shortcuts
 To apply this shared clipboard in iOS using Shortcuts app, just create 2 shortcuts. One to share the iOS devices clipboard, the second is to apply the current shared clipboard.
 
 ### Share iOS clipboard
@@ -35,5 +40,5 @@ This way it's easy to get or set the shared clipboard:
 ![Image](https://i.imgur.com/L5DqKv0.png)
 
 
-## Upcoming (Propably not)
-Android widget version :-)
+# Contribute
+If you would like to help improve this repo, you can help support other systems like Android.
