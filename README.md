@@ -8,11 +8,7 @@ Local shared clipboard using HTTP server. This allows you to easily share your c
 - Windows
 - iOS
 
-# How does it works?
-<p align="center">
-  <img src="https://i.imgur.com/axKGfBC.jpg">
-</p>
-
+# How To Setup?
 ## Modify This Line in Server.py
 ```python
 ServerIP = "CHANGE THIS"
@@ -20,7 +16,9 @@ ServerIP = "CHANGE THIS"
 
 ## Run The Server
 After installing the [required packages](#requirements), double click on `Server.py` or run it using the command line:
-`python Server.py`
+```powershell
+python Server.py
+```
 
 ## Client: Windows"
 Download the same package, change "ServerIP" in "Server.py" to the server IP, then run the files as described below:
