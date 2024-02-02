@@ -24,7 +24,7 @@ Server started at http://192.168.1.123:8000
 ```
 
 ## Client: Windows"
-Run the files as described below:
+Update the `ServerIP` variable in each file and set it to the server IP. Then run the files as described below:
 - `Set-Clipboard.py`: To share your current clipboard with the server.
 - `Get-Clipboard.py`: To get the current shared clipboard from the server and set it as yours.
 
@@ -32,10 +32,14 @@ Run the files as described below:
 To apply this shared clipboard in iOS using Shortcuts app, just create 2 shortcuts. One to share the iOS devices clipboard, the second is to apply the current shared clipboard.
 
 ### Share iOS clipboard
-![Image](https://i.imgur.com/FbmItfM.png)
+Download it from here: 
+https://www.icloud.com/shortcuts/da32be38195a4628820d45690c388dad
+![Image](https://imgur.com/tSlQNZF.png)
 
 ### Get the current shared clipboard
-![Image](https://i.imgur.com/BUBVxgt.png)
+Download it from here: 
+https://www.icloud.com/shortcuts/7e62e35bf85c48b58604579138eed878
+![Image](https://imgur.com/QPoTuts.png)
 
 This way it's easy to get or set the shared clipboard:
 ![Image](https://i.imgur.com/L5DqKv0.png)
