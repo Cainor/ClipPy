@@ -1,27 +1,30 @@
 # ClipPy
 Local shared clipboard using HTTP server. This allows you to easily share your clipboard cross devices
 
-## Requirements
-`pip install -r requirements.txt`
-
 ## Supported OS
 - Windows
 - iOS
 
-# How To Setup?
-## Modify This Line in Server.py
-```python
-ServerIP = "CHANGE THIS"
-```
-
-## Run The Server
+## Setup
 After installing the [required packages](#requirements), double click on `Server.py` or run it using the command line:
 ```powershell
-python Server.py
+#Installing packages:
+> python -m pip install -r requirements.txt
+
+#Running the server
+> python server.py
+Available network interfaces:
+1. ['vEthernet (WSL)'] -> 172.19.160.1
+2. ['Ethernet'] -> 192.168.1.123
+5. ['VMware Network Adapter VMnet1'] -> 192.168.10.1
+6. ['WiFi'] -> 192.168.126.17
+7. ['(unknown)'] -> 127.0.0.1
+Choose the interface (enter the number): 2
+Server started at http://192.168.1.123:8000
 ```
 
 ## Client: Windows"
-Download the same package, change "ServerIP" in "Server.py" to the server IP, then run the files as described below:
+Run the files as described below:
 - `Set-Clipboard.py`: To share your current clipboard with the server.
 - `Get-Clipboard.py`: To get the current shared clipboard from the server and set it as yours.
 

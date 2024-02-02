@@ -1,2 +1,3 @@
 pywin32>=301
 requests==2.31.0
+netifaces
