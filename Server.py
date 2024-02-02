@@ -50,9 +50,6 @@ def get_interface_ip(interface):
     except KeyError:
         #print("Unable to retrieve IP address for the selected interface.")
         return None
-    
-
-ServerIP = "CHANGE THIS"
 
 
 def set_clipboard(clip):
